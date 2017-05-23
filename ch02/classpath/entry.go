@@ -21,4 +21,6 @@ func newEntry(path string) Entry {
 		strings.HasSuffix(path, ".zip") || strings.HasSuffix(path, ".ZIP") {
 		return newZipEntry(path)
 	}
+
+	return newDirEntry(path)
 }
